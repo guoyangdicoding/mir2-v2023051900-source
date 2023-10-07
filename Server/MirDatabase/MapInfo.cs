@@ -45,8 +45,9 @@ namespace Server.MirDatabase
             FileName = reader.ReadString();
             Title = reader.ReadString();
             MiniMap = reader.ReadUInt16();
+            //Hard code Day for maps
             Light = (LightSetting) reader.ReadByte();
-
+            Light = LightSetting.Day;
             BigMap = reader.ReadUInt16();
 
             int count = reader.ReadInt32();
